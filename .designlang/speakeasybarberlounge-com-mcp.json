@@ -1,0 +1,688 @@
+{
+  "colors": {
+    "all": [
+      {
+        "hex": "#333333",
+        "rgb": {
+          "r": 51,
+          "g": 51,
+          "b": 51,
+          "a": 1
+        },
+        "hsl": {
+          "h": 0,
+          "s": 0,
+          "l": 20
+        },
+        "count": 822,
+        "contexts": [
+          "text",
+          "border"
+        ]
+      },
+      {
+        "hex": "#000000",
+        "rgb": {
+          "r": 0,
+          "g": 0,
+          "b": 0,
+          "a": 1
+        },
+        "hsl": {
+          "h": 0,
+          "s": 0,
+          "l": 0
+        },
+        "count": 314,
+        "contexts": [
+          "text",
+          "border",
+          "background"
+        ]
+      },
+      {
+        "hex": "#cc3366",
+        "rgb": {
+          "r": 204,
+          "g": 51,
+          "b": 102,
+          "a": 1
+        },
+        "hsl": {
+          "h": 340,
+          "s": 60,
+          "l": 50
+        },
+        "count": 124,
+        "contexts": [
+          "text",
+          "border"
+        ]
+      },
+      {
+        "hex": "#7a7a7a",
+        "rgb": {
+          "r": 122,
+          "g": 122,
+          "b": 122,
+          "a": 1
+        },
+        "hsl": {
+          "h": 0,
+          "s": 0,
+          "l": 48
+        },
+        "count": 88,
+        "contexts": [
+          "text",
+          "border"
+        ]
+      },
+      {
+        "hex": "#ffffff",
+        "rgb": {
+          "r": 255,
+          "g": 255,
+          "b": 255,
+          "a": 0.35
+        },
+        "hsl": {
+          "h": 0,
+          "s": 0,
+          "l": 100
+        },
+        "count": 46,
+        "contexts": [
+          "text",
+          "border"
+        ]
+      },
+      {
+        "hex": "#6ec1e4",
+        "rgb": {
+          "r": 110,
+          "g": 193,
+          "b": 228,
+          "a": 1
+        },
+        "hsl": {
+          "h": 198,
+          "s": 69,
+          "l": 66
+        },
+        "count": 38,
+        "contexts": [
+          "border",
+          "text"
+        ]
+      },
+      {
+        "hex": "#494c4f",
+        "rgb": {
+          "r": 73,
+          "g": 76,
+          "b": 79,
+          "a": 1
+        },
+        "hsl": {
+          "h": 210,
+          "s": 4,
+          "l": 30
+        },
+        "count": 16,
+        "contexts": [
+          "text",
+          "border"
+        ]
+      },
+      {
+        "hex": "#ffcc00",
+        "rgb": {
+          "r": 255,
+          "g": 204,
+          "b": 0,
+          "a": 1
+        },
+        "hsl": {
+          "h": 48,
+          "s": 100,
+          "l": 50
+        },
+        "count": 16,
+        "contexts": [
+          "text",
+          "border"
+        ]
+      },
+      {
+        "hex": "#efefef",
+        "rgb": {
+          "r": 239,
+          "g": 239,
+          "b": 239,
+          "a": 1
+        },
+        "hsl": {
+          "h": 0,
+          "s": 0,
+          "l": 94
+        },
+        "count": 1,
+        "contexts": [
+          "background"
+        ]
+      },
+      {
+        "hex": "#61ce70",
+        "rgb": {
+          "r": 97,
+          "g": 206,
+          "b": 112,
+          "a": 1
+        },
+        "hsl": {
+          "h": 128,
+          "s": 53,
+          "l": 59
+        },
+        "count": 1,
+        "contexts": [
+          "background"
+        ]
+      }
+    ]
+  },
+  "regions": [
+    {
+      "role": "nav",
+      "tag": "header",
+      "bounds": {
+        "x": 0,
+        "y": 0,
+        "w": 1280,
+        "h": 154.578125
+      },
+      "heading": null,
+      "buttonCount": 5,
+      "cardCount": 27,
+      "className": null
+    },
+    {
+      "role": "nav",
+      "tag": "nav",
+      "bounds": {
+        "x": 272,
+        "y": 33.28125,
+        "w": 736,
+        "h": 88
+      },
+      "heading": null,
+      "buttonCount": 0,
+      "cardCount": 12,
+      "className": "hfe-nav-menu__layout-horizontal hfe-nav-menu__submenu-arrow"
+    },
+    {
+      "role": "nav",
+      "tag": "nav",
+      "bounds": {
+        "x": 0,
+        "y": 0,
+        "w": 0,
+        "h": 0
+      },
+      "heading": null,
+      "buttonCount": 0,
+      "cardCount": 14,
+      "className": null
+    },
+    {
+      "role": "testimonials",
+      "tag": "main",
+      "bounds": {
+        "x": 0,
+        "y": 0,
+        "w": 1280,
+        "h": 11144.59375
+      },
+      "heading": "A $10 gift to first time clients from the Speakeasy team\n",
+      "buttonCount": 14,
+      "cardCount": 10,
+      "className": "site-main post-2197 page type-page status-publish has-post-thumbnail hentry"
+    },
+    {
+      "role": "footer",
+      "tag": "footer",
+      "bounds": {
+        "x": 0,
+        "y": 11144.59375,
+        "w": 1280,
+        "h": 1935.171875
+      },
+      "heading": "Business hours:",
+      "buttonCount": 0,
+      "cardCount": 22,
+      "className": null
+    },
+    {
+      "role": "nav",
+      "tag": "nav",
+      "bounds": {
+        "x": 0,
+        "y": 11878.59375,
+        "w": 1280,
+        "h": 16
+      },
+      "heading": null,
+      "buttonCount": 0,
+      "cardCount": 12,
+      "className": "hfe-nav-menu__layout-horizontal hfe-nav-menu__submenu-arrow"
+    }
+  ],
+  "componentClusters": [
+    {
+      "kind": "button",
+      "structuralHash": "div>div",
+      "instanceCount": 3,
+      "variants": [
+        {
+          "css": {
+            "background": "rgba(0, 0, 0, 0)",
+            "color": "rgb(51, 51, 51)",
+            "padding": "0px 0px 0px 0px",
+            "borderRadius": "0px",
+            "border": "0px none rgb(51, 51, 51)",
+            "fontSize": "16px",
+            "fontWeight": "400"
+          },
+          "instanceCount": 3
+        }
+      ]
+    },
+    {
+      "kind": "button",
+      "structuralHash": "div>a",
+      "instanceCount": 3,
+      "variants": [
+        {
+          "css": {
+            "background": "rgba(0, 0, 0, 0)",
+            "color": "rgb(51, 51, 51)",
+            "padding": "0px 0px 0px 0px",
+            "borderRadius": "0px",
+            "border": "0px none rgb(51, 51, 51)",
+            "fontSize": "16px",
+            "fontWeight": "400"
+          },
+          "instanceCount": 3
+        }
+      ]
+    },
+    {
+      "kind": "button",
+      "structuralHash": "a>span",
+      "instanceCount": 3,
+      "variants": [
+        {
+          "css": {
+            "background": "rgba(0, 0, 0, 0)",
+            "color": "rgb(255, 204, 0)",
+            "padding": "20px 40px 20px 40px",
+            "borderRadius": "3px",
+            "border": "1px solid rgb(255, 204, 0)",
+            "fontSize": "20px",
+            "fontWeight": "500"
+          },
+          "instanceCount": 2
+        },
+        {
+          "css": {
+            "background": "rgb(97, 206, 112)",
+            "color": "rgb(255, 255, 255)",
+            "padding": "12px 24px 12px 24px",
+            "borderRadius": "3px",
+            "border": "0px none rgb(255, 255, 255)",
+            "fontSize": "15px",
+            "fontWeight": "500"
+          },
+          "instanceCount": 1
+        }
+      ]
+    },
+    {
+      "kind": "button",
+      "structuralHash": "span>span",
+      "instanceCount": 3,
+      "variants": [
+        {
+          "css": {
+            "background": "rgba(0, 0, 0, 0)",
+            "color": "rgb(255, 204, 0)",
+            "padding": "0px 0px 0px 0px",
+            "borderRadius": "0px",
+            "border": "0px none rgb(255, 204, 0)",
+            "fontSize": "20px",
+            "fontWeight": "500"
+          },
+          "instanceCount": 2
+        },
+        {
+          "css": {
+            "background": "rgba(0, 0, 0, 0)",
+            "color": "rgb(255, 255, 255)",
+            "padding": "0px 0px 0px 0px",
+            "borderRadius": "0px",
+            "border": "0px none rgb(255, 255, 255)",
+            "fontSize": "15px",
+            "fontWeight": "500"
+          },
+          "instanceCount": 1
+        }
+      ]
+    },
+    {
+      "kind": "button",
+      "structuralHash": "span",
+      "instanceCount": 3,
+      "variants": [
+        {
+          "css": {
+            "background": "rgba(0, 0, 0, 0)",
+            "color": "rgb(255, 204, 0)",
+            "padding": "0px 0px 0px 0px",
+            "borderRadius": "0px",
+            "border": "0px none rgb(255, 204, 0)",
+            "fontSize": "20px",
+            "fontWeight": "500"
+          },
+          "instanceCount": 2
+        },
+        {
+          "css": {
+            "background": "rgba(0, 0, 0, 0)",
+            "color": "rgb(255, 255, 255)",
+            "padding": "0px 0px 0px 0px",
+            "borderRadius": "0px",
+            "border": "0px none rgb(255, 255, 255)",
+            "fontSize": "15px",
+            "fontWeight": "500"
+          },
+          "instanceCount": 1
+        }
+      ]
+    }
+  ],
+  "accessibility": {
+    "remediation": []
+  },
+  "cssHealth": {
+    "sheets": [
+      {
+        "url": "https://speakeasybarberlounge.com/",
+        "totalBytes": 7626,
+        "usedBytes": 0,
+        "unusedBytes": 7626,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://speakeasybarberlounge.com/",
+        "totalBytes": 422,
+        "usedBytes": 418,
+        "unusedBytes": 4,
+        "unusedPercent": 1
+      },
+      {
+        "url": "https://speakeasybarberlounge.com/",
+        "totalBytes": 117,
+        "usedBytes": 113,
+        "unusedBytes": 4,
+        "unusedPercent": 3
+      },
+      {
+        "url": "https://speakeasybarberlounge.com/",
+        "totalBytes": 8363,
+        "usedBytes": 7439,
+        "unusedBytes": 924,
+        "unusedPercent": 11
+      },
+      {
+        "url": "https://speakeasybarberlounge.com/",
+        "totalBytes": 668,
+        "usedBytes": 227,
+        "unusedBytes": 441,
+        "unusedPercent": 66
+      },
+      {
+        "url": "https://speakeasybarberlounge.com/",
+        "totalBytes": 74,
+        "usedBytes": 71,
+        "unusedBytes": 3,
+        "unusedPercent": 4
+      },
+      {
+        "url": "https://speakeasybarberlounge.com/",
+        "totalBytes": 654,
+        "usedBytes": 378,
+        "unusedBytes": 276,
+        "unusedPercent": 42
+      },
+      {
+        "url": "https://speakeasybarberlounge.com/",
+        "totalBytes": 134,
+        "usedBytes": 0,
+        "unusedBytes": 134,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://speakeasybarberlounge.com/",
+        "totalBytes": 3970,
+        "usedBytes": 2903,
+        "unusedBytes": 1067,
+        "unusedPercent": 27
+      },
+      {
+        "url": "https://speakeasybarberlounge.com/",
+        "totalBytes": 116,
+        "usedBytes": 0,
+        "unusedBytes": 116,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://speakeasybarberlounge.com/",
+        "totalBytes": 5678,
+        "usedBytes": 101,
+        "unusedBytes": 5577,
+        "unusedPercent": 98
+      },
+      {
+        "url": "https://speakeasybarberlounge.com/",
+        "totalBytes": 71,
+        "usedBytes": 0,
+        "unusedBytes": 71,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://speakeasybarberlounge.com/",
+        "totalBytes": 100,
+        "usedBytes": 96,
+        "unusedBytes": 4,
+        "unusedPercent": 4
+      },
+      {
+        "url": "https://speakeasybarberlounge.com/",
+        "totalBytes": 585,
+        "usedBytes": 264,
+        "unusedBytes": 321,
+        "unusedPercent": 55
+      },
+      {
+        "url": "https://speakeasybarberlounge.com/",
+        "totalBytes": 2020,
+        "usedBytes": 353,
+        "unusedBytes": 1667,
+        "unusedPercent": 83
+      },
+      {
+        "url": "https://speakeasybarberlounge.com/",
+        "totalBytes": 31087,
+        "usedBytes": 222,
+        "unusedBytes": 30865,
+        "unusedPercent": 99
+      },
+      {
+        "url": "https://speakeasybarberlounge.com/",
+        "totalBytes": 166,
+        "usedBytes": 71,
+        "unusedBytes": 95,
+        "unusedPercent": 57
+      },
+      {
+        "url": "https://speakeasybarberlounge.com/",
+        "totalBytes": 1034,
+        "usedBytes": 1026,
+        "unusedBytes": 8,
+        "unusedPercent": 1
+      },
+      {
+        "url": "https://speakeasybarberlounge.com/",
+        "totalBytes": 113,
+        "usedBytes": 0,
+        "unusedBytes": 113,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://speakeasybarberlounge.com/",
+        "totalBytes": 3322,
+        "usedBytes": 3317,
+        "unusedBytes": 5,
+        "unusedPercent": 0
+      },
+      {
+        "url": "https://speakeasybarberlounge.com/",
+        "totalBytes": 141,
+        "usedBytes": 0,
+        "unusedBytes": 141,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://speakeasybarberlounge.com/",
+        "totalBytes": 180,
+        "usedBytes": 177,
+        "unusedBytes": 3,
+        "unusedPercent": 2
+      },
+      {
+        "url": "https://speakeasybarberlounge.com/",
+        "totalBytes": 13640,
+        "usedBytes": 11082,
+        "unusedBytes": 2558,
+        "unusedPercent": 19
+      },
+      {
+        "url": "https://speakeasybarberlounge.com/",
+        "totalBytes": 141,
+        "usedBytes": 0,
+        "unusedBytes": 141,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://speakeasybarberlounge.com/",
+        "totalBytes": 143,
+        "usedBytes": 0,
+        "unusedBytes": 143,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://speakeasybarberlounge.com/",
+        "totalBytes": 509,
+        "usedBytes": 191,
+        "unusedBytes": 318,
+        "unusedPercent": 62
+      },
+      {
+        "url": "https://speakeasybarberlounge.com/",
+        "totalBytes": 281,
+        "usedBytes": 275,
+        "unusedBytes": 6,
+        "unusedPercent": 2
+      },
+      {
+        "url": "https://speakeasybarberlounge.com/",
+        "totalBytes": 62,
+        "usedBytes": 59,
+        "unusedBytes": 3,
+        "unusedPercent": 5
+      },
+      {
+        "url": "https://speakeasybarberlounge.com/",
+        "totalBytes": 62,
+        "usedBytes": 59,
+        "unusedBytes": 3,
+        "unusedPercent": 5
+      },
+      {
+        "url": "https://speakeasybarberlounge.com/",
+        "totalBytes": 6384,
+        "usedBytes": 0,
+        "unusedBytes": 6384,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://speakeasybarberlounge.com/",
+        "totalBytes": 692,
+        "usedBytes": 0,
+        "unusedBytes": 692,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://speakeasybarberlounge.com/",
+        "totalBytes": 71,
+        "usedBytes": 0,
+        "unusedBytes": 71,
+        "unusedPercent": 100
+      },
+      {
+        "url": "https://speakeasybarberlounge.com/wp-content/uploads/al_opt_content/CSS/6b6aa5e9617a942749d30cefbbf59d47.css",
+        "totalBytes": 196772,
+        "usedBytes": 0,
+        "unusedBytes": 196772,
+        "unusedPercent": 100
+      }
+    ],
+    "totalBytes": 285398,
+    "usedBytes": 28842,
+    "unusedBytes": 256556,
+    "unusedPercent": 90,
+    "importantCount": 15,
+    "duplicates": 3343,
+    "vendorPrefixes": {
+      "webkit": 592,
+      "moz": 14,
+      "ms": 53,
+      "o": 0
+    },
+    "keyframes": [
+      {
+        "name": "appear",
+        "steps": 2
+      }
+    ],
+    "specificity": {
+      "max": [
+        1,
+        5,
+        3
+      ],
+      "average": [
+        0,
+        0.85,
+        0.2
+      ],
+      "count": 722
+    },
+    "issues": [
+      "15 !important rules",
+      "3343 duplicate declarations",
+      "90% unused CSS"
+    ]
+  }
+}

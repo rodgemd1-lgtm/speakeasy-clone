@@ -1,0 +1,45 @@
+{
+  "tone": "friendly",
+  "pronoun": "you-only",
+  "headingStyle": "Sentence case",
+  "headingLengthClass": "tight",
+  "ctaVerbs": [
+    {
+      "value": "book",
+      "count": 5
+    },
+    {
+      "value": "review",
+      "count": 5
+    },
+    {
+      "value": "explore",
+      "count": 5
+    }
+  ],
+  "buttonPatterns": [
+    {
+      "value": "book now",
+      "count": 5
+    },
+    {
+      "value": "review policy",
+      "count": 5
+    },
+    {
+      "value": "explore all services",
+      "count": 5
+    }
+  ],
+  "sampleHeadings": [
+    "A $10 gift to first time clients from the Speakeasy team\n",
+    "Our Barbershop Services",
+    "Business hours:",
+    "Location:",
+    "Contact:"
+  ],
+  "stats": {
+    "buttons": 15,
+    "headings": 5
+  }
+}
