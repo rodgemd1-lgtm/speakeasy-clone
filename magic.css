@@ -159,9 +159,14 @@ html, body {
 .elementor-image-carousel-wrapper {
   overflow: hidden;
   touch-action: pan-y;
+  max-width: 100% !important;
 }
 .swiper-wrapper {
+  max-width: 100% !important;
   transition: transform 500ms cubic-bezier(.25,.46,.45,.94) !important;
+}
+.swiper-slide {
+  max-width: 100% !important;
 }
 .elementor-swiper-button-prev,
 .elementor-swiper-button-next {
