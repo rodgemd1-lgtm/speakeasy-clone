@@ -1,0 +1,351 @@
+/* ═══════════════════════════════════════
+   SPEAKEASY CLONE — MAGIC LAYER CSS
+   adds the interactivity the original had
+   ═══════════════════════════════════════ */
+
+/* ── 1. $10 Lead Modal ── */
+#lead-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 999999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .35s ease;
+}
+#lead-modal.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+#lead-modal .lm-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,.75);
+  backdrop-filter: blur(4px);
+}
+#lead-modal .lm-box {
+  position: relative;
+  z-index: 1;
+  background: #0a0a0a;
+  border: 1px solid var(--gold, #c9a962);
+  border-radius: 12px;
+  padding: 38px 32px 32px;
+  max-width: 420px;
+  width: 90%;
+  text-align: center;
+  transform: translateY(30px) scale(.96);
+  transition: transform .4s cubic-bezier(.25,.46,.45,.94);
+}
+#lead-modal.active .lm-box {
+  transform: translateY(0) scale(1);
+}
+#lead-modal .lm-close {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  background: none;
+  border: none;
+  color: var(--gold, #c9a962);
+  font-size: 28px;
+  cursor: pointer;
+  line-height: 1;
+}
+#lead-modal h2 {
+  font-family: "GFS Didot", serif;
+  font-size: 24px;
+  color: #fff;
+  margin: 0 0 10px;
+}
+#lead-modal p {
+  color: #aaa;
+  font-size: 14px;
+  margin: 0 0 24px;
+  line-height: 1.5;
+}
+#lead-modal .lm-field {
+  display: block;
+  width: 100%;
+  margin-bottom: 14px;
+  background: transparent;
+  border: 1px solid rgba(201,169,98,.35);
+  border-radius: 6px;
+  padding: 12px 14px;
+  color: #fff;
+  font-size: 15px;
+  outline: none;
+  transition: border-color .2s;
+}
+#lead-modal .lm-field:focus {
+  border-color: var(--gold, #c9a962);
+}
+#lead-modal .lm-field::placeholder {
+  color: #666;
+}
+#lead-modal .lm-btn {
+  display: inline-block;
+  width: 100%;
+  padding: 14px;
+  background: var(--gold, #c9a962);
+  color: #000;
+  border: none;
+  border-radius: 6px;
+  font-family: granville, sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  text-transform: uppercase;
+  cursor: pointer;
+  margin-top: 6px;
+  transition: filter .2s, transform .15s;
+}
+#lead-modal .lm-btn:hover {
+  filter: brightness(1.1);
+  transform: translateY(-1px);
+}
+
+/* ── 2. FAQ Accordion ── */
+.elementor-tab-content {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height .35s ease, opacity .25s ease, padding .25s ease;
+  padding: 0 10px;
+}
+.elementor-tab-content.is-open {
+  max-height: 800px;
+  opacity: 1;
+  padding: 10px;
+}
+.elementor-toggle-icon-opened,
+.elementor-tab-title[aria-expanded="false"] .elementor-toggle-icon-opened {
+  display: none !important;
+}
+.elementor-toggle-icon-closed,
+.elementor-tab-title[aria-expanded="true"] .elementor-toggle-icon-closed {
+  display: inline-block !important;
+}
+.elementor-tab-title[aria-expanded="true"] .elementor-toggle-icon-opened {
+  display: inline-block !important;
+}
+.elementor-tab-title[aria-expanded="true"] .elementor-toggle-icon-closed {
+  display: none !important;
+}
+.elementor-tab-title {
+  cursor: pointer;
+  transition: color .2s;
+}
+.elementor-tab-title:hover {
+  color: var(--gold, #c9a962);
+}
+
+/* ── 3. Gallery Carousel ── */
+.elementor-image-carousel-wrapper {
+  overflow: hidden;
+  touch-action: pan-y;
+}
+.swiper-wrapper {
+  transition: transform 500ms cubic-bezier(.25,.46,.45,.94) !important;
+}
+.elementor-swiper-button-prev,
+.elementor-swiper-button-next {
+  opacity: .7;
+  transition: opacity .2s, transform .2s;
+  cursor: pointer;
+  background: rgba(0,0,0,.4);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.elementor-swiper-button-prev:hover,
+.elementor-swiper-button-next:hover {
+  opacity: 1;
+  transform: scale(1.15);
+  background: rgba(0,0,0,.6);
+}
+.swiper-pagination-bullet {
+  transition: transform .2s, background .2s, width .2s;
+  cursor: pointer;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255,255,255,.35);
+  display: inline-block;
+  margin: 0 4px;
+}
+.swiper-pagination-bullet:hover,
+.swiper-pagination-bullet-active {
+  transform: scale(1.35);
+  background: var(--gold, #c9a962);
+}
+
+/* ── 4. Sticky Header ── */
+.site-header.is-sticky,
+header.is-sticky {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99999;
+  background: rgba(0,0,0,.92) !important;
+  backdrop-filter: blur(12px) saturate(1.2);
+  box-shadow: 0 2px 20px rgba(0,0,0,.4);
+  animation: headerSlideDown .4s ease forwards;
+}
+@keyframes headerSlideDown {
+  from { transform: translateY(-100%); opacity: 0; }
+  to   { transform: translateY(0); opacity: 1; }
+}
+
+/* Ensure body has room when header goes fixed */
+body.has-sticky-header {
+  padding-top: var(--header-height, 80px);
+}
+
+/* ── 5. Scroll Entrance Animations ── */
+.animated {
+  opacity: 0;
+  animation-play-state: paused;
+}
+.animated.in-view {
+  opacity: 1;
+  animation-play-state: running;
+}
+
+/* Override defaults: when in-view, trigger the animation class */
+.animated.in-view.slideInUp {
+  animation: slideInUp .8s cubic-bezier(.25,.46,.45,.94) forwards;
+}
+.animated.in-view.slideInLeft {
+  animation: slideInLeft .8s cubic-bezier(.25,.46,.45,.94) forwards;
+}
+.animated.in-view.slideInRight {
+  animation: slideInRight .8s cubic-bezier(.25,.46,.45,.94) forwards;
+}
+.animated.in-view.fadeInDown {
+  animation: fadeInDown .8s cubic-bezier(.25,.46,.45,.94) forwards;
+}
+.animated.in-view.fadeIn {
+  animation: fadeIn .8s cubic-bezier(.25,.46,.45,.94) forwards;
+}
+
+@keyframes slideInUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-40px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(40px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* ── 6. Mobile Hamburger Menu ── */
+.hfe-nav-menu__layout-horizontal.is-open {
+  display: flex !important;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 280px;
+  max-width: 80vw;
+  background: #0a0a0a;
+  z-index: 100000;
+  padding: 80px 30px 30px;
+  box-shadow: 4px 0 30px rgba(0,0,0,.5);
+  animation: menuSlideIn .3s ease forwards;
+}
+@keyframes menuSlideIn {
+  from { transform: translateX(-100%); opacity: 0; }
+  to   { transform: translateX(0); opacity: 1; }
+}
+.hfe-nav-menu__layout-horizontal.is-open .hfe-menu-item {
+  padding: 14px 0;
+  font-size: 18px;
+  border-bottom: 1px solid rgba(255,255,255,.06);
+  display: block;
+  color: #fff;
+  text-decoration: none;
+}
+.hfe-nav-menu__layout-horizontal.is-open .hfe-menu-item:hover {
+  color: var(--gold, #c9a962);
+}
+.hfe-nav-menu__toggle {
+  cursor: pointer;
+  padding: 6px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ── 7. Service Card Hover ── */
+.elementor-element-537aadd,
+.elementor-element-edb1ec0,
+.elementor-element-ffde532 {
+  transition: transform .35s cubic-bezier(.25,.46,.45,.94),
+              box-shadow .35s ease;
+}
+.elementor-element-537aadd:hover,
+.elementor-element-edb1ec0:hover,
+.elementor-element-ffde532:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0,0,0,.45);
+}
+
+/* ── 8. Button hover glow ── */
+.elementor-button {
+  transition: transform .2s, box-shadow .2s, filter .2s !important;
+}
+.elementor-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(201,169,98,.25);
+  filter: brightness(1.08);
+}
+
+/* ── 9. Smooth scroll ── */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ── 10. Trustindex widget fallback ── */
+.bv-tag-attr-replace[data-src*="trustindex"] {
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ── 11. Book Now modal container ── */
+#book-modal {
+  animation: fadeIn .3s ease;
+}
+#book-modal > div {
+  animation: scaleIn .35s cubic-bezier(.25,.46,.45,.94);
+}
+@keyframes scaleIn {
+  from { transform: scale(.9); opacity: 0; }
+  to   { transform: scale(1); opacity: 1; }
+}
+
+/* ── 12. Reduced motion ── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
