@@ -141,7 +141,7 @@
 
     function resetAutoplay() {
       if (autoplayTimer) clearInterval(autoplayTimer);
-      autoplayTimer = setInterval(next, 4000);
+      autoplayTimer = setInterval(next, 1000);
     }
     resetAutoplay();
 

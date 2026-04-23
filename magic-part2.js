@@ -150,25 +150,11 @@
     });
   })();
 
-  /* ── 17. Text typing effect for hero (once) ── */
+  /* ── 17. Text typing effect for hero (DISABLED — original shows full text immediately) ── */
   (function typeWriterEffect() {
-    const heroHeading = $('h1.elementor-heading-title');
-    if (!heroHeading || sessionStorage.getItem('heroTyped')) return;
-    const original = heroHeading.textContent;
-    heroHeading.textContent = '';
-    heroHeading.classList.add('type-cursor');
-    let i = 0;
-    function type() {
-      if (i < original.length) {
-        heroHeading.textContent += original[i];
-        i++;
-        setTimeout(type, 45);
-      } else {
-        heroHeading.classList.remove('type-cursor');
-        sessionStorage.setItem('heroTyped', '1');
-      }
-    }
-    setTimeout(type, 250);
+    // Original site shows "Best Barber Shop in Denver" immediately without typing.
+    // Typewriter effect was extra magic but breaks pixel-perfect match.
+    return;
   })();
 
   /* ── 18. Smooth anchor scrolling ── */
