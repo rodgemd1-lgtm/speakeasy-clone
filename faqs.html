@@ -15436,4 +15436,36 @@ document.addEventListener('DOMContentLoaded', function() {
     .hfe-flyout-wrapper { display: block !important; }
 }
 </style>
+
+<style>/* NAV WIDTH FIX */
+.elementor-229 .elementor-element.elementor-element-d629838 {
+    --width: auto !important;
+    --flex-grow: 0 !important;
+    flex-grow: 0 !important;
+}
+.elementor-229 .elementor-element.elementor-element-70623fa {
+    --width: 60% !important;
+    --flex-grow: 1 !important;
+    flex-grow: 1 !important;
+}
+/* Ensure FAQS wraps to second line at 1280px */
+@media (min-width: 1025px) {
+    .hfe-nav-menu__layout-horizontal .hfe-nav-menu {
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+    }
+    .elementor-229 .elementor-element-70623fa .hfe-nav-menu__layout-horizontal .hfe-nav-menu li:nth-child(6) {
+        flex-basis: 100% !important;
+        text-align: center !important;
+    }
+}
+</style>
+
+
+<style>/* FOOTER NAV FIX - match original stacked layout */
+.elementor-229 .elementor-element.elementor-element-footer-nav .hfe-nav-menu__layout-vertical .hfe-nav-menu {
+    flex-direction: column !important;
+}
+</style>
+
 </body></html>
