@@ -717,7 +717,7 @@ body {
 	
 	
 	<link rel="profile" href="http://gmpg.org/xfn/11">
-	<link rel="pingback" href="https://speakeasybarberlounge.com/xmlrpc.php">
+	<link rel="pingback" href="#">
 	
 		<style type="text/css">html.sdui-panel-open body:not(.wp-admin){margin-right:400px}html.sdui-panel-open #wpcontent,html.sdui-panel-open #wpfooter{margin-right:400px}html.sdui-panel-open body:not(.wp-admin):not(.block-editor-page) header.wp-block-template-part{right:400px}#sdui-panel-placeholder{display:none;position:fixed;right:0;top:var(--wp-admin--admin-bar--height,32px);width:400px;height:calc(100dvh - var(--wp-admin--admin-bar--height,32px));background:linear-gradient(135deg,#1a1230 0%,#110c1d 100%);z-index:99999}html.sdui-panel-open #sdui-panel-placeholder{display:block}@media(max-width:768px){html.sdui-panel-open body:not(.wp-admin),html.sdui-panel-open #wpcontent,html.sdui-panel-open #wpfooter{margin-right:0}html.sdui-panel-open #sdui-panel-placeholder{display:none}}</style>
 		
@@ -17328,10 +17328,10 @@ body { }
 	
 
 
-<link rel="alternate" type="application/rss+xml" title="Speakeasy » Feed" href="https://speakeasybarberlounge.com/feed/">
-<link rel="alternate" type="application/rss+xml" title="Speakeasy » Comments Feed" href="https://speakeasybarberlounge.com/comments/feed/">
-<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://speakeasybarberlounge.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fspeakeasybarberlounge.com%2F">
-<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://speakeasybarberlounge.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fspeakeasybarberlounge.com%2F&amp;format=xml">
+<link rel="alternate" type="application/rss+xml" title="Speakeasy » Feed" href="#">
+<link rel="alternate" type="application/rss+xml" title="Speakeasy » Comments Feed" href="#">
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="#oembed/1.0/embed?url=https%3A%2F%2Fspeakeasybarberlounge.com%2F">
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="#oembed/1.0/embed?url=https%3A%2F%2Fspeakeasybarberlounge.com%2F&amp;format=xml">
 <style type="text/css">
 img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 /*# sourceURL=wp-img-auto-sizes-contain-inline-css */
@@ -17506,7 +17506,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <template id="lnduljUPCRIufjnXIMxr"></template>
 <template id="EC3py7RYOgsCu8DuXdY8"></template>
 
-<link rel="https://api.w.org/" href="https://speakeasybarberlounge.com/wp-json/"><link rel="alternate" title="JSON" type="application/json" href="https://speakeasybarberlounge.com/wp-json/wp/v2/pages/2197"><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://speakeasybarberlounge.com/xmlrpc.php?rsd">
+<link rel="https://api.w.org/" href="#"><link rel="alternate" title="JSON" type="application/json" href="#wp/v2/pages/2197"><link rel="EditURI" type="application/rsd+xml" title="RSD" href="#?rsd">
 <link rel="shortlink" href="https://speakeasybarberlounge.com/">
 <style type="text/css"> .ae_data .elementor-editor-element-setting {
             display:none !important;
@@ -17660,7 +17660,7 @@ body {
 
 </head>
 
-<body class="home wp-singular page-template-default page page-id-2197 wp-custom-logo wp-embed-responsive wp-theme-hello-elementor ehf-header ehf-footer ehf-template-hello-elementor ehf-stylesheet-hello-elementor hello-elementor-default elementor-default elementor-kit-11 elementor-page elementor-page-2197 e--ua-blink e--ua-mac e--ua-webkit premium-modal-open" data-elementor-device-mode="desktop">
+<body class="home wp-singular page-template-default page page-id-2197 wp-custom-logo wp-embed-responsive wp-theme-hello-elementor ehf-header ehf-footer ehf-template-hello-elementor ehf-stylesheet-hello-elementor hello-elementor-default elementor-default elementor-kit-11 elementor-page elementor-page-2197 e--ua-blink e--ua-mac e--ua-webkit " data-elementor-device-mode="desktop">
 <div id="page" class="hfeed site">
 
 		<header id="masthead">
@@ -18366,4 +18366,93 @@ body {
 dialog { display: none !important; }
 </style>
 
+
+<script>
+// === SPEAKEASY CLONE ENHANCEMENTS ===
+
+document.addEventListener('DOMContentLoaded', function() {
+    
+    // 1. GALLERY CAROUSEL HORIZONTAL SCROLL
+    var prevBtns = document.querySelectorAll('.elementor-swiper-button-prev, .swiper-button-prev');
+    var nextBtns = document.querySelectorAll('.elementor-swiper-button-next, .swiper-button-next');
+    var wrappers = document.querySelectorAll('.swiper-wrapper');
+    
+    if (wrappers.length > 0 && wrappers[0]) {
+        var wrapper = wrappers[0];
+        var scrollAmount = 320;
+        
+        prevBtns.forEach(function(btn) {
+            btn.style.display = 'flex';
+            btn.style.cursor = 'pointer';
+            btn.addEventListener('click', function() {
+                wrapper.scrollBy({left: -scrollAmount, behavior: 'smooth'});
+            });
+        });
+        nextBtns.forEach(function(btn) {
+            btn.style.display = 'flex';
+            btn.style.cursor = 'pointer';
+            btn.addEventListener('click', function() {
+                wrapper.scrollBy({left: scrollAmount, behavior: 'smooth'});
+            });
+        });
+    }
+    
+    // 2. TRIGGER ENTRANCE ANIMATIONS
+    var animatedEls = document.querySelectorAll('[data-settings*="animation"], .premium-mask-yes, .elementor-invisible');
+    animatedEls.forEach(function(el) {
+        el.style.opacity = '1';
+        el.style.visibility = 'visible';
+        el.classList.add('animated');
+    });
+    
+    // 3. HIDE DUAL MOBILE NAV IF DESKTOP
+    var isMobile = window.innerWidth <= 1024;
+    var flyoutMenus = document.querySelectorAll('.hfe-flyout-wrapper');
+    var horizontalMenus = document.querySelectorAll('.hfe-nav-menu__layout-horizontal');
+    
+    if (isMobile) {
+        horizontalMenus.forEach(function(m) { m.style.display = 'none'; });
+        flyoutMenus.forEach(function(m) { m.style.display = 'block'; });
+    } else {
+        flyoutMenus.forEach(function(m) { m.style.display = 'none'; });
+    }
+    
+    // 4. FIX ALL SERVICE CARD LINKS (not the main nav)
+    document.querySelectorAll('a[href*="razor-fade"], a[href*="mens-haircut"], a[href*="hot-towel-shave"]').forEach(function(a) {
+        a.setAttribute('href', './services.html');
+    });
+    
+    // 5. FIX POLICIES RELATIVE LINK
+    document.querySelectorAll('a[href="/policies/"]').forEach(function(a) {
+        a.setAttribute('href', './policies.html');
+    });
+    document.querySelectorAll('a[href="/services/"]').forEach(function(a) {
+        a.setAttribute('href', './services.html');
+    });
+});
+</script>
+
+
+<style>/* Final header fixes */
+.elementor-229 .elementor-element.elementor-element-5e85267 {
+    --justify-content: space-between !important;
+    justify-content: space-between !important;
+}
+.elementor-229 .elementor-element.elementor-element-d629838 {
+    --width: auto !important;
+    --justify-content: flex-start !important;
+}
+.elementor-229 .elementor-element.elementor-element-70623fa {
+    --width: auto !important;
+    --justify-content: flex-end !important;
+}
+@media (max-width: 1024px) {
+    .elementor-229 .elementor-element.elementor-element-5e85267 {
+        --flex-direction: row !important;
+        --flex-wrap: nowrap !important;
+    }
+    .hfe-nav-menu__layout-horizontal { display: none !important; }
+    .hfe-flyout-wrapper { display: block !important; }
+}
+</style>
 </body></html>
