@@ -890,7 +890,31 @@ body {
 				.lg-thumb-item.active {
 					opacity: 1;
 				}
-	         </style></head>
+	         </style>
+<style>
+/* Critical fix: restore gold link color */
+a { color: #ffcc00 !important; }
+a:hover { color: #ffdd33 !important; }
+
+/* Fix hero section background */
+.elementor-element-78ba3c7 {
+    background-image: url('./images/393246524_861481188872865_5035215941677593302_n.jpg') !important;
+    background-size: cover !important;
+    background-position: center !important;
+}
+
+/* Fix gallery carousel images */
+.swiper-slide img[src=''] {
+    display: none;
+}
+
+/* Ensure gallery shows our local images */
+.elementor-image-carousel .swiper-slide img {
+    max-height: 300px;
+    object-fit: cover;
+}
+</style>
+</head>
 
 <body class="home wp-singular page-template-default page page-id-2197 wp-custom-logo wp-embed-responsive wp-theme-hello-elementor ehf-header ehf-footer ehf-template-hello-elementor ehf-stylesheet-hello-elementor hello-elementor-default elementor-default elementor-kit-11 elementor-page elementor-page-2197">
 <div id="page" class="hfeed site">
@@ -1031,7 +1055,7 @@ body {
 				<div class="elementor-element elementor-element-9e17d71 elementor-align-center elementor-mobile-align-center elementor-widget elementor-widget-button" data-id="9e17d71" data-element_type="widget" data-e-type="widget" data-widget_type="button.default">
 				<div class="elementor-widget-container">
 									<div class="elementor-button-wrapper">
-					<a class="elementor-button elementor-button-link elementor-size-sm" href="/policies/">
+					<a class="elementor-button elementor-button-link elementor-size-sm" href="./policies.html">
 						<span class="elementor-button-content-wrapper">
 									<span class="elementor-button-text">Review Policy</span>
 					</span>
@@ -1109,7 +1133,7 @@ body {
 				</div>
 				<div class="elementor-element elementor-element-1dd9d10 elementor-widget elementor-widget-text-editor" data-id="1dd9d10" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
 				<div class="elementor-widget-container">
-									<p>Hot Towel<br />Whether it&#8217;s hat hair, product, sweat, or hair getting dirty throughout the day, it all gets in the way of a good haircut. That&#8217;s why we use a <a href="./services.html">hot towel</a> when needed to clean and lift the hair up&#8230; plus, it feels awesome!</p><p>Drinks<br />Drinks are on the house. Enjoy a whiskey on ice, beer, coffee, or sparkling water while you wait or during your haircut.</p><p>Hot lather neck shave<br />There&#8217;s nothing better than topping off a good haircut with a hot lather neck shave. That&#8217;s why, here at Speakeasy Barber Lounge, a hot lather neck shave comes with every haircut.</p><p>Massage chair<br />All of our chairs have a lower back stimulating massager, just another added bonus to elevate your haircut experience.</p>								</div>
+									<p>Hot Towel<br />Whether it&#8217;s hat hair, product, sweat, or hair getting dirty throughout the day, it all gets in the way of a good haircut. That&#8217;s why we use a <a href="./services.html"><span style="color: #ffcc00;">hot towel</span></a> when needed to clean and lift the hair up&#8230; plus, it feels awesome!</p><p>Drinks<br />Drinks are on the house. Enjoy a whiskey on ice, beer, coffee, or sparkling water while you wait or during your haircut.</p><p>Hot lather neck shave<br />There&#8217;s nothing better than topping off a good haircut with a hot lather neck shave. That&#8217;s why, here at Speakeasy Barber Lounge, a hot lather neck shave comes with every haircut.</p><p>Massage chair<br />All of our chairs have a lower back stimulating massager, just another added bonus to elevate your haircut experience.</p>								</div>
 				</div>
 		<div class="elementor-element elementor-element-0a51984 e-con-full e-flex wpr-particle-no wpr-jarallax-no wpr-parallax-no wpr-sticky-section-no wpr-equal-height-no e-con e-child" data-id="0a51984" data-element_type="container" data-e-type="container">
 		<div class="elementor-element elementor-element-537aadd e-flex e-con-boxed wpr-particle-no wpr-jarallax-no wpr-parallax-no wpr-sticky-section-no wpr-equal-height-no elementor-invisible e-con e-child" data-id="537aadd" data-element_type="container" data-e-type="container" data-settings="{&quot;animation&quot;:&quot;slideInUp&quot;}">
@@ -1152,7 +1176,7 @@ body {
 				<div class="elementor-element elementor-element-a81797e elementor-align-center elementor-mobile-align-center elementor-widget elementor-widget-button" data-id="a81797e" data-element_type="widget" data-e-type="widget" data-widget_type="button.default">
 				<div class="elementor-widget-container">
 									<div class="elementor-button-wrapper">
-					<a class="elementor-button elementor-button-link elementor-size-sm" href="/services/">
+					<a class="elementor-button elementor-button-link elementor-size-sm" href="./services.html">
 						<span class="elementor-button-content-wrapper">
 									<span class="elementor-button-text">Explore All Services</span>
 					</span>
