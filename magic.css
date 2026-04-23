@@ -3,6 +3,16 @@
    adds the interactivity the original had
    ═══════════════════════════════════════ */
 
+/* Force nav links to stay on single line */
+.hfe-nav-menu,
+.hfe-nav-menu__layout-horizontal .hfe-nav-menu {
+    flex-wrap: nowrap !important;
+    white-space: nowrap !important;
+}
+.hfe-nav-menu li.menu-item a {
+    white-space: nowrap !important;
+}
+
 /* ── 1. $10 Lead Modal ── */
 #lead-modal {
   position: fixed;
