@@ -370,3 +370,83 @@ html {
     transition-duration: 0.01ms !important;
   }
 }
+
+/* ── 13. Hero section background fix ── */
+/* The static clone loses Elementor's runtime bg-image handling.
+   Re-apply the hero background image + dark overlay. */
+body.elementor-page-2197 {
+  position: relative;
+}
+body.elementor-page-2197::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: url('https://speakeasybarberlounge.com/wp-content/uploads/2024/10/VAN7066-scaled.jpg') center center / cover no-repeat;
+  z-index: 0;
+  opacity: 0.35;
+  filter: grayscale(30%);
+}
+.elementor-page-2197 .elementor-element-4a2b192 {
+  position: relative;
+  z-index: 1;
+}
+/* Ensure all content is above the bg */
+.elementor-page-2197 > div:not(#lead-modal),
+.elementor-page-2197 > .elementor {
+  position: relative;
+  z-index: 1;
+}
+/* Hide the inline VAN7066 image (it's used as bg, not visible content) */
+.elementor-element-db335c2 .elementor-element-6b953cc,
+.elementor-element-db335c2 .elementor-element-bfa219d {
+  display: none;
+}
+
+
+/* ── 13. Hero section background fix ── */
+/* The static clone loses Elementor's runtime bg-image handling.
+   Re-apply the hero background image + dark overlay.
+   Target the hero container directly. */
+
+/* Hero container: add background image with dark overlay */
+.elementor-element-4a2b192 {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.elementor-element-4a2b192::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    linear-gradient(to bottom, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.85) 50%, #000000 100%),
+    url('https://speakeasybarberlounge.com/wp-content/uploads/2024/10/VAN7066-scaled.jpg') center center / cover no-repeat;
+  z-index: 0;
+}
+
+/* Hero content above the overlay */
+.elementor-element-4a2b192 > .e-con-inner {
+  position: relative;
+  z-index: 1;
+}
+
+/* Hide the duplicate VAN7066 images in the content row */
+/* (They're shown as background now) */
+.elementor-element-6b953cc,
+.elementor-element-bfa219d {
+  opacity: 0.8;
+}
+
+/* Ensure all sections below hero are above the overlay */
+.elementor-element-db335c2,
+.elementor-element-db335c2 ~ * {
+  position: relative;
+  z-index: 1;
+}
