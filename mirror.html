@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Mirror — SpeakEasy Barber Lounge</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=GFS+Didot&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="strategy-reveal.css">
+<meta name="description" content="What happens when the #1 barbershop in Denver stops running on memory and starts running on a system.">
+<meta name="robots" content="noindex,nofollow">
+<style>
+/* Critical CSS — inline, above-fold */
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#000;color:#efefef;font-family:"Montserrat",sans-serif;overflow-x:hidden}
+.rig-entry{position:fixed;inset:0;z-index:999990;display:flex;align-items:center;justify-content:center;cursor:pointer;text-decoration:none}
+.rig-entry-inner{text-align:center;padding:40px 20px;max-width:600px}
+.rig-entry h1{font-family:"GFS Didot",serif;font-size:clamp(28px,5vw,48px);color:#ffcc00;line-height:1.1;margin-bottom:24px}
+.rig-entry p{font-size:18px;color:#888;line-height:1.6;margin-bottom:32px}
+.rig-entry .rig-enter{display:inline-block;font-family:"GFS Didot",serif;font-size:18px;color:#ffcc00;border:1px solid rgba(255,204,0,0.5);padding:14px 36px;border-radius:3px;cursor:pointer;transition:all 0.3s;text-decoration:none}
+.rig-entry .rig-enter:hover{background:rgba(255,204,0,0.08);border-color:#ffcc00;transform:translateY(-2px)}
+.back-link{position:fixed;top:20px;left:20px;z-index:999991;font-family:"Montserrat",sans-serif;font-size:13px;color:rgba(255,204,0,0.6);text-decoration:none;border:1px solid rgba(255,204,0,0.2);padding:8px 16px;border-radius:3px;transition:all 0.3s}
+.back-link:hover{color:#ffcc00;border-color:rgba(255,204,0,0.5)}
+</style>
+</head>
+<body>
+
+<a href="index.html" class="back-link">← Back to Site</a>
+
+<div class="rig-entry" id="rig-entry">
+  <div class="rig-entry-inner">
+    <h1>You did not build a barbershop.</h1>
+    <p>You built Denver's best-kept identity ritual.</p>
+    <a href="#" class="rig-enter" id="rig-enter-btn">Enter if the gap is obvious</a>
+  </div>
+</div>
+
+<script>
+document.getElementById('rig-enter-btn').addEventListener('click', function(e) {
+  e.preventDefault();
+  var entry = document.getElementById('rig-entry');
+  entry.style.opacity = '0';
+  entry.style.transition = 'opacity 0.5s';
+  setTimeout(function() {
+    entry.style.display = 'none';
+    // Load the strategy panel
+    var s = document.createElement('script');
+    s.src = 'strategy-reveal.js';
+    document.body.appendChild(s);
+    // Open the panel after script loads
+    s.onload = function() {
+      setTimeout(function() {
+        var toggle = document.getElementById('strategy-toggle');
+        if (toggle) toggle.click();
+      }, 300);
+    };
+  }, 500);
+});
+</script>
+
+</body>
+</html>

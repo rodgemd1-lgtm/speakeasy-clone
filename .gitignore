@@ -1,1 +1,12 @@
 .vercel
+.audit/
+*.backup.html
+index-backup.html
+404.html
+services.html
+gallery.html
+barbers.html
+faqs.html
+policies.html
+careers.html
+index-new.html
