@@ -567,3 +567,52 @@
   .rig-lift { font-size: 30px; }
   .rig-echo-flip { font-size: 22px; }
 }
+.rig-echo-credit {
+  font-family: "Montserrat", sans-serif;
+  font-size: 13px;
+  color: rgba(255, 204, 0, 0.4);
+  margin: 24px 0 0;
+  line-height: 1.4;
+}
+.rig-echo-credit a {
+  color: rgba(255, 204, 0, 0.5);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 204, 0, 0.2);
+  transition: color 0.2s, border-color 0.2s;
+}
+.rig-echo-credit a:hover {
+  color: #ffcc00;
+  border-color: rgba(255, 204, 0, 0.5);
+}
+
+/* ── Navigation links ── */
+.rig-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 0;
+  margin: 32px 0 0;
+  border-top: 1px solid rgba(255, 204, 0, 0.1);
+}
+.rig-nav-link {
+  font-family: "GFS Didot", serif;
+  font-size: 16px;
+  color: #FFCC00;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+.rig-nav-link:hover {
+  opacity: 0.7;
+}
+.rig-nav-credit {
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  color: rgba(255, 204, 0, 0.4);
+  border: 1px solid rgba(255, 204, 0, 0.15);
+  padding: 6px 12px;
+  border-radius: 3px;
+}
+.rig-nav-credit:hover {
+  color: rgba(255, 204, 0, 0.7);
+  border-color: rgba(255, 204, 0, 0.3);
+}

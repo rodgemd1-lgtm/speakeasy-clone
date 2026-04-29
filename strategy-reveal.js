@@ -203,7 +203,8 @@
       lines: [
         { text: 'The gap is not going away.', cls: 'rig-echo-wound' },
         { text: 'It\'s getting organized against you.', cls: 'rig-echo-flip' },
-        { text: '30 minutes. Your shop. If the fit is obvious.', cls: 'rig-echo-cta' }
+        { text: '30 minutes. Your shop. If the fit is obvious.', cls: 'rig-echo-cta' },
+        { text: '<a href="https://mikerodgers.tech" target="_blank" style="color:rgba(255,204,0,0.5);font-family:Montserrat,sans-serif;font-size:13px;text-decoration:none;border-bottom:1px solid rgba(255,204,0,0.2)">mikerodgers.tech</a>', cls: 'rig-echo-credit' }
       ]
     }
   ];
