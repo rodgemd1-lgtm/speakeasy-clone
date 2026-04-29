@@ -10,3 +10,11 @@ faqs.html
 policies.html
 careers.html
 index-new.html
+# Large files - use WebP for web
+images/mockup-dashboard.png
+images/mockup-newsite.png
+images/mockup-locations.png
+images/mockup-*-*-opt.png
+images/mockup-?-opt.png
+.audit/
+_designlang/
