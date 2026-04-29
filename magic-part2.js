@@ -30,6 +30,7 @@
 
     const glow = document.createElement('div');
     glow.id = 'cursor-glow';
+    glow.style.cssText = 'position:fixed;pointer-events:none;z-index:9998;width:300px;height:300px;border-radius:50%;background:radial-gradient(circle,rgba(255,204,0,0.15) 0%,transparent 70%);transform:translate(-50%,-50%);opacity:0;transition:opacity 0.3s;display:block;';
     document.body.appendChild(glow);
     hero.classList.add('has-cursor-glow');
 
@@ -49,6 +50,7 @@
 
     const lightbox = document.createElement('div');
     lightbox.id = 'img-lightbox';
+    lightbox.style.cssText = 'position:fixed !important;inset:0;z-index:99999;background:rgba(0,0,0,0.95);display:none;align-items:center;justify-content:center;';
     lightbox.innerHTML = `
       <button class="lb-close" aria-label="Close">&times;</button>
       <button class="lb-nav lb-prev" aria-label="Previous">&#8249;</button>

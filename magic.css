@@ -375,19 +375,12 @@ html {
 /* The static clone loses Elementor's runtime bg-image handling.
    Re-apply the hero background image + dark overlay. */
 body.elementor-page-2197 {
-  position: relative;
+  position: static !important;
 }
+/* HERO: Moved to .elementor-element-4a2b192::before */
 body.elementor-page-2197::before {
-  content: '';
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  background: url('images-local/892eeb9dfb_VAN7066-scaled.jpg') center center / cover no-repeat;
-  z-index: 0;
-  opacity: 0.35;
-  filter: grayscale(30%);
+  content: none !important;
+  display: none !important;
 }
 .elementor-page-2197 .elementor-element-4a2b192 {
   position: relative;
