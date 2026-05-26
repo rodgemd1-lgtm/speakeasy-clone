@@ -167,3 +167,49 @@ README applied from the central RIG blueprint.
 - Blueprint source: `https://github.com/rodgemd1-lgtm/Startup-Intelligence-OS/blob/claude/rig-sovereign-audit-mesh/docs/repositories/repo-readme-blueprints/speakeasy-clone.md`
 - Applied target: `speakeasy-clone`
 - Source of truth: QNAP Gitea first, GitHub mirror second.
+
+<!-- RIG-CLI:START -->
+## Install The CLI
+
+This repo exposes a standard RIG command so it can be installed, inspected,
+cloned, and routed into future studio/MCP workflows without guessing its
+internal layout.
+
+Install without cloning:
+
+```bash
+curl -fsSL https://github.com/rodgemd1-lgtm/speakeasy-clone/raw/main/install.sh | bash
+```
+
+Install and clone the source-of-truth repo:
+
+```bash
+curl -fsSL https://github.com/rodgemd1-lgtm/speakeasy-clone/raw/main/install.sh | RIG_CLI_CLONE=1 bash
+```
+
+Use it:
+
+```bash
+speakeasy-clone info
+speakeasy-clone capabilities
+speakeasy-clone services
+speakeasy-clone clone
+speakeasy-clone doctor
+```
+
+Clone manually:
+
+```bash
+git clone ssh://git@nas94f2ae.tail4d96b3.ts.net:2222/rig/speakeasy-clone.git
+git clone https://github.com/rodgemd1-lgtm/speakeasy-clone.git
+```
+
+CLI contract:
+
+- Command: `speakeasy-clone`
+- Manifest: `cli/manifest.json`
+- Installer: `install.sh`
+- Source of truth: QNAP Gitea first, GitHub mirror second
+- Standard: [https://github.com/rodgemd1-lgtm/Startup-Intelligence-OS/blob/claude/rig-sovereign-audit-mesh/docs/repositories/repo-cli-standard.md](https://github.com/rodgemd1-lgtm/Startup-Intelligence-OS/blob/claude/rig-sovereign-audit-mesh/docs/repositories/repo-cli-standard.md)
+
+<!-- RIG-CLI:END -->
