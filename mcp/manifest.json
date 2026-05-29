@@ -1,0 +1,110 @@
+{
+  "schema": "rig.mcp.v1",
+  "name": "speakeasy-clone",
+  "description": "Read-only MCP surface for the speakeasy-clone design-language and asset archive.",
+  "version": "0.1.0",
+  "status": "roadmap",
+  "auth": "none",
+  "transport": "stdio",
+  "local_smoke": "bash bin/speakeasy-clone smoke",
+  "boundaries": [
+    "Read-only. No mutations, no credentials, no external calls.",
+    "Never expose raw private paths, secrets, or browser session state.",
+    "Human approval required before any destructive or deployment operation."
+  ],
+  "tools": [
+    {
+      "name": "get_repo_info",
+      "description": "Return repo identity: slug, lane, status, source-of-truth URLs.",
+      "input_schema": {},
+      "output_schema": {
+        "type": "object",
+        "properties": {
+          "slug": { "type": "string" },
+          "lane": { "type": "string" },
+          "status": { "type": "string" },
+          "qnap_clone": { "type": "string" },
+          "github_url": { "type": "string" }
+        }
+      },
+      "implementation_status": "pending",
+      "local_command": "bash bin/speakeasy-clone info"
+    },
+    {
+      "name": "get_capabilities",
+      "description": "Return the capability contract declared in cli/manifest.json.",
+      "input_schema": {},
+      "output_schema": {
+        "type": "object",
+        "properties": {
+          "capabilities": { "type": "array", "items": { "type": "string" } }
+        }
+      },
+      "implementation_status": "pending",
+      "local_command": "bash bin/speakeasy-clone capabilities"
+    },
+    {
+      "name": "get_design_tokens",
+      "description": "Return the design tokens extracted from the live site (.designlang/speakeasybarberlounge-com-design-tokens.json).",
+      "input_schema": {},
+      "output_schema": { "type": "object" },
+      "implementation_status": "pending",
+      "local_path": ".designlang/speakeasybarberlounge-com-design-tokens.json"
+    },
+    {
+      "name": "run_smoke",
+      "description": "Run the deterministic local smoke check and return pass/fail with details.",
+      "input_schema": {},
+      "output_schema": {
+        "type": "object",
+        "properties": {
+          "passed": { "type": "boolean" },
+          "failures": { "type": "integer" },
+          "output": { "type": "string" }
+        }
+      },
+      "implementation_status": "pending",
+      "local_command": "bash bin/speakeasy-clone smoke"
+    }
+  ],
+  "resources": [
+    {
+      "name": "design_language",
+      "description": "All files under .designlang/ describing the extracted design language of the site.",
+      "path": ".designlang/",
+      "mime_type": "application/json",
+      "access": "read-only"
+    },
+    {
+      "name": "cli_manifest",
+      "description": "CLI capability manifest at cli/manifest.json.",
+      "path": "cli/manifest.json",
+      "mime_type": "application/json",
+      "access": "read-only"
+    },
+    {
+      "name": "proof",
+      "description": "Proof packets and smoke results under proof/.",
+      "path": "proof/",
+      "mime_type": "text/markdown",
+      "access": "read-only"
+    }
+  ],
+  "prompts": [
+    {
+      "name": "audit_design_language",
+      "description": "Prompt an agent to audit the extracted design language and produce a summary of color palette, typography, and component patterns.",
+      "template": "Review the files in .designlang/ for the speakeasy-clone repo. Summarize: (1) brand color palette, (2) typography scale, (3) component patterns, (4) any design-system gaps. Do not print private paths or credentials."
+    },
+    {
+      "name": "v10_harvest_plan",
+      "description": "Prompt an agent to produce an asset harvest plan for the consolidation action.",
+      "template": "This repo's consolidation action is archive-after-asset-harvest targeting speakeasy-barbershop. Review the tracked files and propose: (1) which assets to harvest, (2) which to discard, (3) what ProofPacket to write before archiving. Do not deploy or delete anything."
+    }
+  ],
+  "proof": {
+    "generated_at": "2026-05-29T14:00:00Z",
+    "generated_by": "copilot-agent/v10-design-issue",
+    "standard": "https://github.com/rodgemd1-lgtm/Startup-Intelligence-OS/blob/claude/rig-sovereign-audit-mesh/docs/repositories/repo-cli-standard.md"
+  }
+}
