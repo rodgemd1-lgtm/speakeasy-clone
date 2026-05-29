@@ -93,6 +93,47 @@ doctor() {
   git ls-remote "$GITHUB_CLONE" "refs/heads/$DEFAULT_BRANCH" >/dev/null 2>&1 && echo "github: reachable" || echo "github: unavailable"
 }
 
+smoke() {
+  local repo_root
+  repo_root="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." 2>/dev/null && pwd)" || repo_root="$LOCAL_REPO"
+  local errors=0
+
+  check() {
+    local label="$1" path="$2"
+    if [ -e "$repo_root/$path" ]; then
+      echo "PASS $label: $path"
+    else
+      echo "FAIL $label: $path not found"
+      errors=$((errors + 1))
+    fi
+  }
+
+  echo "=== speakeasy-clone smoke ==="
+  check "bin"          "bin/speakeasy-clone"
+  check "cli-manifest" "cli/manifest.json"
+  check "install"      "install.sh"
+  check "readme"       "README.md"
+  check "mcp"          "mcp/manifest.json"
+  check "agent"        ".github/copilot-instructions.md"
+
+  echo "--- cli self-check ---"
+  if bash "$repo_root/bin/speakeasy-clone" info >/dev/null 2>&1; then
+    echo "PASS cli: info command exits 0"
+  else
+    echo "FAIL cli: info command failed"
+    errors=$((errors + 1))
+  fi
+
+  echo "--- result ---"
+  if [ "$errors" -eq 0 ]; then
+    echo "SMOKE PASS (0 failures)"
+    return 0
+  else
+    echo "SMOKE FAIL ($errors failures)"
+    return 1
+  fi
+}
+
 usage() {
   cat <<USAGE
 Usage: $REPO_SLUG <command>
@@ -105,6 +146,7 @@ Commands:
   open          Open the local clone when present, otherwise GitHub.
   docs          Open the GitHub README.
   doctor        Check dependencies and remote reachability.
+  smoke         Run deterministic local smoke checks (no network required).
   help          Show this help.
 USAGE
 }
@@ -117,6 +159,7 @@ case "${1:-help}" in
   open) open_target ;;
   docs) open "$GITHUB_URL#readme" 2>/dev/null || printf '%s#readme\n' "$GITHUB_URL" ;;
   doctor) doctor ;;
+  smoke) smoke ;;
   help|-h|--help) usage ;;
   *) echo "Unknown command: $1" >&2; usage; exit 2 ;;
 esac

@@ -1,0 +1,43 @@
+name: Weekly Smoke
+
+on:
+  schedule:
+    - cron: "0 6 * * 1"   # Monday 06:00 UTC
+  workflow_dispatch:       # allow manual trigger
+
+permissions:
+  contents: write
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Run smoke check
+        id: smoke
+        run: |
+          mkdir -p proof/looper-v10-cockpit
+          bash bin/speakeasy-clone smoke | tee proof/looper-v10-cockpit/smoke-latest.txt
+
+      - name: Validate JSON files
+        run: |
+          python3 -m json.tool cli/manifest.json  > /dev/null
+          python3 -m json.tool mcp/manifest.json  > /dev/null
+          echo "JSON files: ok"
+
+      - name: Shell syntax check
+        run: bash -n bin/speakeasy-clone
+
+      - name: Commit proof if changed
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add proof/looper-v10-cockpit/smoke-latest.txt
+          if git diff --cached --quiet; then
+            echo "No proof changes to commit."
+          else
+            git commit -m "chore: weekly smoke proof $(date -u +%Y-%m-%d)"
+            git push
+          fi
